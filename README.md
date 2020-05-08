@@ -82,14 +82,14 @@
 1.一共有多少基础类型？
 2.对比js增加了哪几种类型？
 ```
-## 基础类型常见的bug
+### 基础类型常见的bug
 ```
   bug1:和全局变量命名冲突的问题!!!!!!!!!!!!!!!!!!!!!!!!
-  desc: Cannot redeclare（重新声明） block-scoped(块级) variable(变量) 'name'
-  let name: string = 'davie li' // 这里的name已经在全局声明过了
-  解决办法：模块化
-    如果文件里出现了export或者import,ts会把这个文件当成一个模块，模块里面的变量会变成私有变量，就不会和全局变量起冲突
-    export {}
+    desc: Cannot redeclare（重新声明） block-scoped(块级) variable(变量) 'name'
+    let name: string = 'davie li' // 这里的name已经在全局声明过了
+    解决办法：模块化
+      如果文件里出现了export或者import,ts会把这个文件当成一个模块，模块里面的变量会变成私有变量，就不会和全局变量起冲突
+      export {}
 ```
 
 
