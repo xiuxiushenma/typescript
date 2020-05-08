@@ -1,24 +1,13 @@
-# 编译
-```
-1.如何编译Typescript文件？
-  tsc helloworld.ts  
-2.是否可以将多个.ts文件合并成一个.js文件？如果是，那么如何做？
-  tsc --outFile comman.js file1.ts file2.ts file3.ts  
-3.能否自动编译.ts文件，并实时修改.ts文件？
-  tsc --watch file1.ts  
-4.如何生成ts配置文件tsconfig.json
-  tsc --init
-5.tsconfig.json的字段含义
 {
-  // 编译选项
   "compilerOptions": {
-    "incremental": true,                   /* 增量编译：开启监控，和热跟新一样 */
-    "target": "es5",                          /* ecma目标版本 */
-    "module": "commonjs",                     /* 生成的js模块的规范 */
-    "lib": [],                             /*  */
-    "allowJs": true,                       /*  */
-    "checkJs": true,                       /* */
-    "jsx": "preserve",                     /* */
+    /* Basic Options */
+    // "incremental": true,                   /* Enable incremental compilation */
+    "target": "es5",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+    "module": "commonjs",                     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+    // "lib": [],                             /* Specify library files to be included in the compilation. */
+    // "allowJs": true,                       /* Allow javascript files to be compiled. */
+    // "checkJs": true,                       /* Report errors in .js files. */
+    // "jsx": "preserve",                     /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
     // "declaration": true,                   /* Generates corresponding '.d.ts' file. */
     // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
     // "sourceMap": true,                     /* Generates corresponding '.map' file. */
@@ -75,51 +64,3 @@
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
   }
 }
-```
-
-# 基础类型
-```
-
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 面试经
-```
-1.void 和 undefined 有什么区别？
-2.什么是 never 类型？
-3.readonly 和 const 有什么区别？
-4.什么是 Abstract Class？
-5.什么是 class mixin, 如何实现？
-6.typeof 关键词有什么用？
-7.keyof 关键词有什么用？
-8.tsconfig.json 里 --strictNullChecks 参数的作用是什么？
-9.interface 和 type 声明有什么区别？
-10.「import ... from」、「 import ... = require()」 和 「import(path: string)」有什么区别？
-11.declare 关键字有什么用？
-12.module 关键字有什么用？
-13.如何处理才能在 TS 中引用 CSS 或者 图片使之不报错？
-14.编写 d.ts 来声明下面的 js 文件
-class Foo {
-}
-module.exports = Foo;
-module.exports.Bar = 1;
-15.namespace 和 module 有什么区别
-16.如何实现 module alias?编译成 JS 能否直接运行？
-17.import Bar from '@src/Bar';
-18.哪些声明类型既可以当做 type 也可以当做 value？
-
-```
