@@ -5,7 +5,9 @@
 2.是否可以将多个.ts文件合并成一个.js文件？如果是，那么如何做？
   tsc --outFile comman.js file1.ts file2.ts file3.ts  
 3.能否自动编译.ts文件，并实时修改.ts文件？
-  tsc --watch file1.ts  
+  第一步 tsc --init 生成tsconfig.json 改“outDir”: "./js"
+  在VsCode中找到菜单栏 - 任务 - 运行任务 监视tsConfig.json
+  或者用命令： tsc --watch file1.ts  
 4.如何生成ts配置文件tsconfig.json
   tsc --init
 5.tsconfig.json的字段含义
@@ -26,7 +28,26 @@
 # 基础类型知识点
 ```
 1.一共有多少基础类型？
+  布尔类型 boolean
+  数字类型 number
+  字符串类型 string
+  数组类型 array
+  元组类型 tuple
+  枚举类型 enum
+  任意类型 any
+  null 和 undefined
+  void类型
+  never类型
 2.对比js增加了哪几种类型？
+  js6种数据类型：boolean，number，string，null，undefined,  引用类型：object
+  es6中新增: symbol
+  ts中新增5z类型： 
+    元组类型 tuple
+    枚举类型 enum
+    任意类型 any
+    void类型
+    never类型
+3.元组怎么定义的，和数组有什么区别？
 ```
 ### 基础类型常见的bug
 ```
