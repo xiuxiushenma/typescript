@@ -1,4 +1,4 @@
-# 编译
+## 编译
 ```
 1.如何编译Typescript文件？
   tsc helloworld.ts  
@@ -25,7 +25,7 @@
 }
 ```
 
-# 基础类型知识点
+## 基础类型
 ```
 1.一共有多少基础类型？
   布尔类型 boolean
@@ -41,7 +41,7 @@
 2.对比js增加了哪几种类型？
   js6种数据类型：boolean，number，string，null，undefined,  引用类型：object
   es6中新增: symbol
-  ts中新增5z类型： 
+  ts中新增5种类型： 
     元组类型 tuple
     枚举类型 enum
     任意类型 any
@@ -56,6 +56,41 @@
       每一项可以是不同的类型	    每一项都是同一种类型
          有预定义的长度	             没有长度限制
       用于表示一个固定的结构	      用于表示一个列表
+5.枚举如何定义的？
+6.any适合用的场景？
+  第三方库没有提供类型文件时可以使用any
+  类型转换遇到困难时
+  数据结构太复杂难以定义
+7.dom元素怎么定义类型呢？
+  let root:(HTMLElement|null)=document.getElementById('root');
+8.怎么去设置dom元素属性呢，怎么规避null报错呢？
+  // any可以逃脱类型检测
+  let root1:any=document.getElementById('root');
+  root1.style.color='red';
+
+  // 必须是(HTMLElement|null)，不能只是HTMLElement
+  let root:(HTMLElement|null)=document.getElementById('root');
+  // ！！！！！！---------------------重点------------------
+  // 如果root是null，那么就没法用style，所有要断言他是不为空的，那就是HTMLElement  
+  root!.style.color='red';//root!非空断言操作符  !类型断言
+9.undefined和null可以赋值给其他类型吗
+  非严格模式下可以
+  严格模式下不行： tsconfig中开启： "strict": true会导致严格检测null和undefined   
+  但是 strickNullChecks（优先级更高）设置为false，就可以赋值，"strict"就不起作用了，
+10.strickNullChecks设置为false和true有什么区别吗
+  strickNullChecks设置为ture的话undefined和null开启了了严格检查模式，不允许赋值给其他类型
+11.void声明的函数能返回null吗（不能）？能返回undefined吗（能）？
+   在strickNullChecks为true的情况，null不兼容，只能返回undefined
+   但是如果strickNullChecks为false的情况下，且strict也为false下，返会undefined和null都是可以的
+12.never 怎么使用？什么含义？
+  never是null undefined的子类型
+  含义：返回never的函数 必须存在 无法达到（ unreachable ） 的终点
+  场景： 死循环和报错和类型保护
+13.never 和 void 有什么区别 
+  void 可以被赋值为 null 和 undefined的类型。 never 则是一个不包含值的类型。
+  拥有 void 返回值类型的函数能正常运行
+  拥有 never 返回值类型的函数无法正常运行，就是没法走到最后，函数里面遇到死循环和异常中断执行了。
+14.
 ```
 ### 基础类型常见的bug
 ```
@@ -73,6 +108,16 @@ bug2:赋值类型和声明类型不一致的问题
 
 
 
+
+
+
+
+
+
+## 类型推论
+```
+
+```
 
 
 
