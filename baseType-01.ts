@@ -98,3 +98,12 @@ function fn(x: number | string) {
   }
 }
 
+
+
+// 3.12 包装对象（Wrapper Object）
+// JavaScript 的类型分为两种：原始数据类型（Primitive data types）和对象类型（Object types）。
+// 包装类型不能用对象类型去强制转换
+// 当调用基本数据类型方法的时候，JavaScript 会在原始数据类型和对象类型之间做一个迅速的强制性切换
+let isOK: boolean = true; // 编译通过
+let isOK1: boolean = Boolean(1) // 编译通过
+// let isOK2: boolean = new Boolean(1); // 编译失败   期望的 isOK 是一个原始数据类型
