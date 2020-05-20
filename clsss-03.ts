@@ -157,7 +157,7 @@ namespace d {
     //   }
     // }
     // @enhancer
-    // // 但是装饰器装饰的类必须结构一样
+    // 但是装饰器装饰的类必须结构一样
     // class Person {
     //   age: number = 10;
     //   constructor(age: number) {

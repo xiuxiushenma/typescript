@@ -51,7 +51,7 @@
   number[]  和  Array<number>
 4.元组怎么声明的，和数组有什么区别？
   let zhufeng: [string, number] = ['zhufeng', 124]
-  和数组的区别：
+  和数组的区别： 
              元组                     数组
       每一项可以是不同的类型	    每一项都是同一种类型
          有预定义的长度	             没有长度限制
@@ -73,15 +73,15 @@
   // ！！！！！！---------------------重点------------------
   // 如果root是null，那么就没法用style，所有要断言他是不为空的，那就是HTMLElement  
   root!.style.color='red';//root!非空断言操作符  !类型断言
+11.void声明的函数能返回null吗（不能）？能返回undefined吗（能）？
+   在strickNullChecks为true的情况，null不兼容，只能返回undefined
+   但是如果strickNullChecks为false的情况下，且strict也为false下，返会undefined和null都是可以的
 9.undefined和null可以赋值给其他类型吗
   非严格模式下可以
   严格模式下不行： tsconfig中开启： "strict": true会导致严格检测null和undefined   
   但是 strickNullChecks（优先级更高）设置为false，就可以赋值，"strict"就不起作用了，
 10.strickNullChecks设置为false和true有什么区别吗
   strickNullChecks设置为ture的话undefined和null开启了了严格检查模式，不允许赋值给其他类型
-11.void声明的函数能返回null吗（不能）？能返回undefined吗（能）？
-   在strickNullChecks为true的情况，null不兼容，只能返回undefined
-   但是如果strickNullChecks为false的情况下，且strict也为false下，返会undefined和null都是可以的
 12.never 怎么使用？什么含义？
   never是null undefined的子类型
   含义：返回never的函数 必须存在 无法达到（ unreachable ） 的终点
